@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدعم والتواصل - n8n منصة الأتمتة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+        }
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-project-diagram text-white text-sm"></i>
+                        </div>
+                        <span class="text-xl font-bold gradient-text">n8n</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">الرئيسية</a>
+                    <a href="docs.html" class="text-gray-300 hover:text-white transition-colors">الوثائق</a>
+                    <a href="templates.html" class="text-gray-300 hover:text-white transition-colors">القوالب</a>
+                    <a href="support.html" class="text-blue-400 hover:text-blue-300 transition-colors">الدعم</a>
+                    <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
+                        ابدأ الآن
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="floating-element mb-8">
+                <div class="w-24 h-24 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-headset text-4xl text-white"></i>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                <span class="gradient-text">نحن هنا للمساعدة</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                سواء كنت تواجه مشكلة تقنية أو تحتاج إلى مساعدة في إعداد سير العمل، فريقنا جاهز لمساعدتك
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
+                طرق التواصل
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="contact-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-discord text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Discord</h3>
+                    <p class="text-gray-300 mb-4">انضم إلى مجتمعنا النشط على Discord للحصول على مساعدة فورية</p>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors" onclick="openDiscord()">
+                        <i class="fas fa-external-link-alt mr-2"></i>انضم الآن
+                    </button>
+                </div>
+                
+                <div class="contact-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-whatsapp text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">واتساب</h3>
+                    <p class="text-gray-300 mb-4">تواصل معنا عبر واتساب للحصول على دعم سريع</p>
+                    <button class="w-full bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg transition-colors" onclick="openWhatsApp()">
+                        <i class="fas fa-comment mr-2"></i>ابدأ المحادثة
+                    </button>
+                </div>
+                
+                <div class="contact-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">البريد الإلكتروني</h3>
+                    <p class="text-gray-300 mb-4">أرسل لنا بريد إلكتروني وسنرد خلال 24 ساعة</p>
+                    <button class="w-full bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition-colors" onclick="sendEmail()">
+                        <i class="fas fa-paper-plane mr-2"></i>أرسل بريد
+                    </button>
+                </div>
+                
+                <div class="contact-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
+                    <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-github text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">GitHub</h3>
+                    <p class="text-gray-300 mb-4">أبلغ عن مشكلات أو اقترح ميزات جديدة</p>
+                    <button class="w-full bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded-lg transition-colors" onclick="openGitHub()">
+                        <i class="fas fa-bug mr-2"></i>تقرير مشكلة
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
+                نموذج الاتصال
+            </h2>
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold mb-2 text-blue-400">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg form-input text-white placeholder-gray-400 focus:outline-none"
+                                   placeholder="أدخل اسمك الكامل">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold mb-2 text-blue-400">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg form-input text-white placeholder-gray-400 focus:outline-none"
+                                   placeholder="your@email.com">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-semibold mb-2 text-blue-400">الموضوع</label>
+                        <select id="subject" name="subject" required
+                                class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg form-input text-white focus:outline-none">
+                            <option value="">اختر الموضوع</option>
+                            <option value="technical">مشكلة تقنية</option>
+                            <option value="setup">مساعدة في الإعداد</option>
+                            <option value="feature">اقتراح ميزة</option>
+                            <option value="integration">طلب تكامل</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-semibold mb-2 text-blue-400">الرسالة</label>
+                        <textarea id="message" name="message" rows="6" required
+                                  class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg form-input text-white placeholder-gray-400 focus:outline-none resize-none"
+                                  placeholder="صف مشكلتك أو استفسارك بالتفصيل..."></textarea>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <input type="checkbox" id="privacy" name="privacy" required
+                               class="w-4 h-4 text-blue-600 bg-gray-900 border-gray-600 rounded focus:ring-blue-500">
+                        <label for="privacy" class="ml-2 text-sm text-gray-300">
+                            أوافق على <a href="#" class="text-blue-400 hover:text-blue-300">سياسة الخصوصية</a> و<a href="#" class="text-blue-400 hover:text-blue-300">شروط الاستخدام</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" 
+                            class="w-full bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl text-lg font-semibold transition-all transform hover:scale-105">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        إرسال الرسالة
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
+                الأسئلة الشائعة
+            </h2>
+            <div class="space-y-6">
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors" onclick="toggleFAQ(1)">
+                        <span class="text-lg font-semibold">كيف يمكنني البدء مع n8n؟</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform" id="icon-1"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300" id="faq-1">
+                        يمكنك البدء بسهولة عن طريق تثبيت n8n على خادمك باستخدام Docker أو استخدام نسختنا السحابية المجانية. تحقق من دليل البداية السريعة في صفحة الوثائق.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors" onclick="toggleFAQ(2)">
+                        <span class="text-lg font-semibold">ما هي متطلبات النظام لتشغيل n8n؟</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform" id="icon-2"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300" id="faq-2">
+                        n8n يتطلب Node.js (الإصدار 16 أو أحدث) وDocker (اختياري). للحصول على أفضل أداء، نوصي بخادم بذاكرة RAM 4GB على الأقل.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors" onclick="toggleFAQ(3)">
+                        <span class="text-lg font-semibold">هل يمكنني استخدام n8n مع تطبيقاتي المفضلة؟</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform" id="icon-3"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300" id="faq-3">
+                        نعم! n8n يدعم أكثر من 400 تكامل مع تطبيقات شهيرة مثل Gmail، Slack، Google Sheets، HubSpot، وغيرها الكثير. يمكنك أيضاً إضافة أي API باستخدام عقدة HTTP Request.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors" onclick="toggleFAQ(4)">
+                        <span class="text-lg font-semibold">هل توجد قيود على عدد سير العمل؟</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform" id="icon-4"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300" id="faq-4">
+                        لا توجد قيود على عدد سير العمل في النسخة المفتوحة المصدر. في النسخة السحابية، تعتمد الحدود على الخطة التي تختارها.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors" onclick="toggleFAQ(5)">
+                        <span class="text-lg font-semibold">كيف يمكنني المساهمة في تطوير n8n؟</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform" id="icon-5"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300" id="faq-5">
+                        نرحب بالمساهمات! يمكنك المساعدة عن طريق الإبلاغ عن الأخطاء، اقتراح ميزات جديدة، أو المساهمة في الكود على GitHub. تحقق من دليل المساهمة في مستنداتنا.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Stats -->
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
+                مجتمع n8n
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2" data-count="55000">0</div>
+                    <div class="text-gray-300">عضو نشط</div>
+                    <div class="text-sm text-gray-400 mt-1">على Discord</div>
+                </div>
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2" data-count="90000">0</div>
+                    <div class="text-gray-300">نجمة GitHub</div>
+                    <div class="text-sm text-gray-400 mt-1">وتزداد يومياً</div>
+                </div>
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2" data-count="2500">0</div>
+                    <div class="text-gray-300">مساهم</div>
+                    <div class="text-sm text-gray-400 mt-1">في التطوير</div>
+                </div>
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2" data-count="150">0</div>
+                    <div class="text-gray-300">دولة</div>
+                    <div class="text-sm text-gray-400 mt-1">حول العالم</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700 py-12 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="flex items-center justify-center space-x-2 mb-4">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-project-diagram text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-bold gradient-text">n8n</span>
+            </div>
+            <p class="text-gray-400 mb-6">منصة أتمتة سير العمل المفتوحة المصدر للفرق التقنية</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-discord text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-gray-500">
+                <p>&copy; 2025 n8n. جميع الحقوق محفوظة. منصة مفتوحة المصدر تحت رخصة Fair-Code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(id) {
+            const faq = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            if (faq.classList.contains('hidden')) {
+                faq.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                faq.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function openDiscord() {
+            showMessage('جاري فتح Discord...', 'info');
+            // In a real app, this would open the Discord invite link
+            setTimeout(() => {
+                showMessage('تم فتح Discord بنجاح!', 'success');
+            }, 1000);
+        }
+
+        function openWhatsApp() {
+            showMessage('جاري فتح WhatsApp...', 'info');
+            // In a real app, this would open WhatsApp with the support number
+            setTimeout(() => {
+                showMessage('تم فتح WhatsApp بنجاح!', 'success');
+            }, 1000);
+        }
+
+        function sendEmail() {
+            showMessage('جاري فتح تطبيق البريد...', 'info');
+            // In a real app, this would open the default email client
+            setTimeout(() => {
+                showMessage('تم فتح تطبيق البريد!', 'success');
+            }, 1000);
+        }
+
+        function openGitHub() {
+            showMessage('جاري فتح GitHub...', 'info');
+            // In a real app, this would open the GitHub issues page
+            setTimeout(() => {
+                showMessage('تم فتح GitHub بنجاح!', 'success');
+            }, 1000);
+        }
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            
+            // Show loading state
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>جاري الإرسال...';
+            submitButton.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                showMessage('تم إرسال رسالتك بنجاح! سنرد عليك خلال 24 ساعة.', 'success');
+                this.reset();
+                
+                // Reset button
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            }, 2000);
+        });
+
+        function showMessage(text, type = 'info') {
+            const colors = {
+                info: 'bg-blue-600',
+                success: 'bg-green-600',
+                error: 'bg-red-600'
+            };
+            
+            const message = document.createElement('div');
+            message.className = `fixed top-20 right-4 ${colors[type]} text-white px-6 py-3 rounded-lg z-50`;
+            message.innerHTML = `<i class="fas fa-info-circle mr-2"></i>${text}`;
+            document.body.appendChild(message);
+            
+            anime({
+                targets: message,
+                translateX: [300, 0],
+                opacity: [0, 1],
+                duration: 300,
+                complete: () => {
+                    setTimeout(() => {
+                        anime({
+                            targets: message,
+                            translateX: [0, 300],
+                            opacity: [1, 0],
+                            duration: 300,
+                            complete: () => message.remove()
+                        });
+                    }, 3000);
+                }
+            });
+        }
+
+        // Counter animation
+        function initializeCounters() {
+            const counters = document.querySelectorAll('[data-count]');
+            
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            counters.forEach(counter => observer.observe(counter));
+        }
+
+        function animateCounter(element) {
+            const target = parseInt(element.dataset.count);
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 16);
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCounters();
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        anime({
+                            targets: entry.target,
+                            translateY: [50, 0],
+                            opacity: [0, 1],
+                            duration: 800,
+                            easing: 'easeOutQuad',
+                            delay: anime.stagger(100)
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.contact-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(50px)';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

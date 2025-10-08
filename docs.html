@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوثائق - n8n منصة الأتمتة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .doc-card {
+            transition: all 0.3s ease;
+        }
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+        }
+        .step-number {
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-project-diagram text-white text-sm"></i>
+                        </div>
+                        <span class="text-xl font-bold gradient-text">n8n</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">الرئيسية</a>
+                    <a href="docs.html" class="text-blue-400 hover:text-blue-300 transition-colors">الوثائق</a>
+                    <a href="templates.html" class="text-gray-300 hover:text-white transition-colors">القوالب</a>
+                    <a href="support.html" class="text-gray-300 hover:text-white transition-colors">الدعم</a>
+                    <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
+                        ابدأ الآن
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                <span class="gradient-text">الوثائق والدروس</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                تعلم كيفية استخدام n8n لأتمتة سير عملك مع دليلنا الشامل والدروس التعليمية
+            </p>
+        </div>
+    </section>
+
+    <!-- Quick Start Guide -->
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
+                دليل البداية السريعة
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
+                    <div class="step-number w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">1</div>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-400">التثبيت</h3>
+                    <p class="text-gray-300 mb-4">ثبت n8n على خادمك أو استخدم النسخة السحابية</p>
+                    <div class="bg-gray-900 rounded-lg p-3 text-sm font-mono text-green-400">
+                        docker run n8n
+                    </div>
+                </div>
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
+                    <div class="step-number w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">2</div>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-400">إنشاء سير عمل</h3>
+                    <p class="text-gray-300 mb-4">استخدام واجهة السحب والإفلات لبناء سير العمل</p>
+                    <div class="bg-gray-900 rounded-lg p-3 text-sm">
+                        <i class="fas fa-mouse-pointer text-blue-400 mr-2"></i>
+                        سحب وإفلات العناصر
+                    </div>
+                </div>
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
+                    <div class="step-number w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">3</div>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-400">الربط</h3>
+                    <p class="text-gray-300 mb-4">وصل تطبيقاتك المفضلة باستخدام التكاملات الجاهزة</p>
+                    <div class="bg-gray-900 rounded-lg p-3 text-sm">
+                        <i class="fas fa-plug text-green-400 mr-2"></i>
+                        400+ تكامل متاح
+                    </div>
+                </div>
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center">
+                    <div class="step-number w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">4</div>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-400">التشغيل</h3>
+                    <p class="text-gray-300 mb-4">شغّل سير العمل وشاهد الأتمتة تعمل</p>
+                    <div class="bg-gray-900 rounded-lg p-3 text-sm">
+                        <i class="fas fa-play text-purple-400 mr-2"></i>
+                        اضغط للتشغيل
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tutorials -->
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
+                الدروس التعليمية
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700">
+                    <div class="bg-gray-700 h-48 flex items-center justify-center">
+                        <i class="fas fa-play-circle text-6xl text-blue-400 hover:text-blue-300 cursor-pointer transition-colors"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">مقدمة إلى n8n</h3>
+                        <p class="text-gray-300 mb-4">تعرف على أساسيات n8n وكيفية إنشاء أول سير عمل لك</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-blue-400">15 دقيقة</span>
+                            <span class="text-sm text-gray-400">مبتدئ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700">
+                    <div class="bg-gray-700 h-48 flex items-center justify-center">
+                        <i class="fas fa-play-circle text-6xl text-blue-400 hover:text-blue-300 cursor-pointer transition-colors"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">التكاملات المتقدمة</h3>
+                        <p class="text-gray-300 mb-4">تعلم كيفية ربط تطبيقات متعددة ونقل البيانات بينها</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-blue-400">25 دقيقة</span>
+                            <span class="text-sm text-gray-400">متوسط</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700">
+                    <div class="bg-gray-700 h-48 flex items-center justify-center">
+                        <i class="fas fa-play-circle text-6xl text-blue-400 hover:text-blue-300 cursor-pointer transition-colors"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">أتمتة AI</h3>
+                        <p class="text-gray-300 mb-4">دمج نماذج AI في سير العمل لتحقيق أتمتة ذكية</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-blue-400">30 دقيقة</span>
+                            <span class="text-sm text-gray-400">متقدم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Categories -->
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
+                الوثائق حسب الفئة
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-cogs text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">العقد والعناصر</h3>
+                    <p class="text-gray-300 mb-4">تعرف على أنواع العقد المختلفة وكيفية استخدامها في سير العمل</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li><i class="fas fa-chevron-left text-blue-400 mr-2"></i>العقد المُشغلة</li>
+                        <li><i class="fas fa-chevron-left text-blue-400 mr-2"></i>العقد الإجرائية</li>
+                        <li><i class="fas fa-chevron-left text-blue-400 mr-2"></i>العقد المنطقية</li>
+                        <li><i class="fas fa-chevron-left text-blue-400 mr-2"></i>عقد التكامل</li>
+                    </ul>
+                </div>
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">البرمجة المخصصة</h3>
+                    <p class="text-gray-300 mb-4">اكتب JavaScript/Python لإضافة وظائف مخصصة إلى سير العمل</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li><i class="fas fa-chevron-left text-purple-400 mr-2"></i>عقدة الكود</li>
+                        <li><i class="fas fa-chevron-left text-purple-400 mr-2"></i>دوال مخصصة</li>
+                        <li><i class="fas fa-chevron-left text-purple-400 mr-2"></i>معالجة البيانات</li>
+                        <li><i class="fas fa-chevron-left text-purple-400 mr-2"></i>API requests</li>
+                    </ul>
+                </div>
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">الأمان والخصوصية</h3>
+                    <p class="text-gray-300 mb-4">أعدد الأمان وتحكم في الوصول إلى سير العمل والبيانات</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li><i class="fas fa-chevron-left text-green-400 mr-2"></i>إدارة الأذونات</li>
+                        <li><i class="fas fa-chevron-left text-green-400 mr-2"></i>التشفير</li>
+                        <li><i class="fas fa-chevron-left text-green-400 mr-2"></i>الاعتمادات</li>
+                        <li><i class="fas fa-chevron-left text-green-400 mr-2"></i>المراقبة</li>
+                    </ul>
+                </div>
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-robot text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">الذكاء الاصطناعي</h3>
+                    <p class="text-gray-300 mb-4">دمج نماذج AI وإنشاء وكلاء ذكية</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li><i class="fas fa-chevron-left text-orange-400 mr-2"></i>OpenAI Integration</li>
+                        <li><i class="fas fa-chevron-left text-orange-400 mr-2"></i>LangChain</li>
+                        <li><i class="fas fa-chevron-left text-orange-400 mr-2"></i>RAG Pipeline</li>
+                        <li><i class="fas fa-chevron-left text-orange-400 mr-2"></i>Multi-agent Systems</li>
+                    </ul>
+                </div>
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-server text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">الاستضافة والنشر</h3>
+                    <p class="text-gray-300 mb-4">استضف n8n على خوادمك الخاصة أو استخدم الحلول السحابية</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li><i class="fas fa-chevron-left text-red-400 mr-2"></i>Docker Deployment</li>
+                        <li><i class="fas fa-chevron-left text-red-400 mr-2"></i>Kubernetes</li>
+                        <li><i class="fas fa-chevron-left text-red-400 mr-2"></i>Cloud Platforms</li>
+                        <li><i class="fas fa-chevron-left text-red-400 mr-2"></i>Scaling</li>
+                    </ul>
+                </div>
+                <div class="doc-card bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">أفضل الممارسات</h3>
+                    <p class="text-gray-300 mb-4">تعلم أفضل الممارسات لبناء سير عمل فعالة وموثوقة</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li><i class="fas fa-chevron-left text-yellow-400 mr-2"></i>Error Handling</li>
+                        <li><i class="fas fa-chevron-left text-yellow-400 mr-2"></i>Performance</li>
+                        <li><i class="fas fa-chevron-left text-yellow-400 mr-2"></i>Testing</li>
+                        <li><i class="fas fa-chevron-left text-yellow-400 mr-2"></i>Version Control</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Documentation -->
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
+                وثائق API
+            </h2>
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-blue-400">REST API</h3>
+                        <p class="text-gray-300 mb-6">تحكم في n8n برمجياً باستخدام واجهة REST API</p>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-gray-900 rounded-lg p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-green-400 font-semibold">GET</span>
+                                    <span class="text-gray-400 text-sm">/workflows</span>
+                                </div>
+                                <p class="text-gray-300 text-sm">استرجاع قائمة سير العمل</p>
+                            </div>
+                            
+                            <div class="bg-gray-900 rounded-lg p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-blue-400 font-semibold">POST</span>
+                                    <span class="text-gray-400 text-sm">/workflows</span>
+                                </div>
+                                <p class="text-gray-300 text-sm">إنشاء سير عمل جديد</p>
+                            </div>
+                            
+                            <div class="bg-gray-900 rounded-lg p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-orange-400 font-semibold">PUT</span>
+                                    <span class="text-gray-400 text-sm">/workflows/{id}</span>
+                                </div>
+                                <p class="text-gray-300 text-sm">تحديث سير عمل موجود</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-400">Webhooks</h3>
+                        <p class="text-gray-300 mb-6">استقبال البيانات من التطبيقات الخارجية</p>
+                        
+                        <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                            <div class="text-sm text-gray-400 mb-2">عنوان Webhook:</div>
+                            <div class="bg-gray-800 rounded p-2 text-green-400 text-sm font-mono">
+                                https://your-n8n.com/webhook/test-workflow
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-900 rounded-lg p-4">
+                            <div class="text-sm text-gray-400 mb-2">مثال JSON:</div>
+                            <pre class="text-green-400 text-xs font-mono">{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "message": "Hello from webhook!"
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
+                الأسئلة الشائعة
+            </h2>
+            <div class="space-y-6">
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors" onclick="toggleFAQ(1)">
+                        <span class="text-lg font-semibold">هل n8n مجاني بالكامل؟</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform" id="icon-1"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300" id="faq-1">
+                        نعم، n8n هو مشروع مفتوح المصدر ويمكنك استخدامه مجاناً عند استضافته على خوادمك الخاصة. كما نقدم نسخة سحابية مدفوعة لمزيد من الميزات والدعم.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors" onclick="toggleFAQ(2)">
+                        <span class="text-lg font-semibold">هل أحتاج إلى معرفة برمجية لاستخدام n8n؟</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform" id="icon-2"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300" id="faq-2">
+                        لا، يمكنك استخدام n8n بدون أي معرفة برمجية بفضل واجهة السحب والإفلات. ولكن يمكنك أيضاً استخدام JavaScript/Python لإضافة وظائف مخصصة إذا احتجت.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors" onclick="toggleFAQ(3)">
+                        <span class="text-lg font-semibold">كم عدد التكاملات المتاحة؟</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform" id="icon-3"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300" id="faq-3">
+                        n8n يدعم أكثر من 400 تكامل مع تطبيقات وخدمات شهيرة مثل Gmail، Slack، Google Sheets، HubSpot، وغيرها الكثير.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors" onclick="toggleFAQ(4)">
+                        <span class="text-lg font-semibold">هل يمكنني استخدام n8n للأعمال التجارية؟</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform" id="icon-4"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300" id="faq-4">
+                        نعم، n8n مرخص بموجب نموذج Fair-Code الذي يسمح باستخدام تجاري مجاني للميزات الأساسية، مع خيارات مدفوعة للميزات المتقدمة.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
+                    <button class="w-full p-6 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors" onclick="toggleFAQ(5)">
+                        <span class="text-lg font-semibold">كيف يمكنني الحصول على الدعم الفني؟</span>
+                        <i class="fas fa-chevron-down text-blue-400 transition-transform" id="icon-5"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300" id="faq-5">
+                        يمكنك الحصول على الدعم من خلال مجتمعنا على Discord، المنتدى الرسمي، أو التواصل مع فريق الدعم المخصص للنسخة المدفوعة.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700 py-12 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="flex items-center justify-center space-x-2 mb-4">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-project-diagram text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-bold gradient-text">n8n</span>
+            </div>
+            <p class="text-gray-400 mb-6">منصة أتمتة سير العمل المفتوحة المصدر للفرق التقنية</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-discord text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-gray-500">
+                <p>&copy; 2025 n8n. جميع الحقوق محفوظة. منصة مفتوحة المصدر تحت رخصة Fair-Code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(id) {
+            const faq = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            if (faq.classList.contains('hidden')) {
+                faq.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                faq.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        anime({
+                            targets: entry.target,
+                            translateY: [50, 0],
+                            opacity: [0, 1],
+                            duration: 800,
+                            easing: 'easeOutQuad',
+                            delay: anime.stagger(100)
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.doc-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(50px)';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
