@@ -154,7 +154,7 @@ python -m http.server 8000
 ## 📞 التواصل
 
 للأسئلة أو الاقتراحات:
-- 📧 البريد الإلكتروني: n8n.rabic.suppert@gmail.com
+- 📧 البريد الإلكتروني: n8n.arabic.suppert@gmail.com
 - 💬 Discord: n8n Arabic Community
 - 🐦 Twitter: @n8n_arabic
 
